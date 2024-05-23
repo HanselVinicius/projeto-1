@@ -1,16 +1,8 @@
 export async function getAnimesList(request) {
-    let anime = await _makeRequest(request);
+    let anime = await _handleResponse(request);
     return anime;
 }
 
-
-async function _makeRequest(request) {
-    try {
-        return _handleResponse(request);
-    } catch (error) {
-        return null;
-    }
-}
 
 async function _handleResponse(request){
     let response = await fetch(request);
