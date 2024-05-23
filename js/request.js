@@ -1,8 +1,6 @@
 export async function getAnimesList(request) {
-    let anime = await _handleResponse(request);
-    return anime;
+    return await _handleResponse(request);
 }
-
 
 async function _handleResponse(request){
     let response = await fetch(request);
